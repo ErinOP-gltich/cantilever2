@@ -1,0 +1,166 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Creator Platform Design System - Yellow & White Theme */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+
+    --primary: 45 93% 47%;
+    --primary-foreground: 0 0% 98%;
+    --primary-50: 48 100% 97%;
+    --primary-100: 48 95% 93%;
+    --primary-500: 45 93% 47%;
+    --primary-600: 43 89% 40%;
+    --primary-700: 41 84% 33%;
+    --primary-900: 224 71% 4%;
+
+    --secondary: 48 32% 91%;
+    --secondary-foreground: 45 27% 84%;
+
+    --muted: 48 32% 91%;
+    --muted-foreground: 45 20% 65%;
+
+    --accent: 48 32% 91%;
+    --accent-foreground: 224 71% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 48 32% 91%;
+    --input: 48 32% 91%;
+    --ring: 45 93% 47%;
+
+    --creator: 45 93% 47%;
+    --creator-foreground: 0 0% 98%;
+    --creator-hover: 43 89% 40%;
+
+    --surface: 0 0% 100%;
+    --surface-elevated: 48 100% 97%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 213 31% 91%;
+
+    --primary: 45 93% 47%;
+    --primary-foreground: 224 71% 4%;
+    --primary-50: 45 64% 12%;
+    --primary-100: 45 64% 17%;
+    --primary-500: 45 93% 47%;
+    --primary-600: 43 89% 40%;
+    --primary-700: 41 84% 33%;
+    --primary-900: 213 31% 91%;
+
+    --secondary: 45 28% 17%;
+    --secondary-foreground: 213 31% 91%;
+
+    --muted: 45 28% 17%;
+    --muted-foreground: 45 10% 65%;
+
+    --accent: 45 28% 17%;
+    --accent-foreground: 213 31% 91%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 213 31% 91%;
+
+    --border: 45 28% 17%;
+    --input: 45 28% 17%;
+    --ring: 45 93% 47%;
+
+    --creator: 45 93% 47%;
+    --creator-foreground: 224 71% 4%;
+    --creator-hover: 43 89% 40%;
+
+    --surface: 224 71% 4%;
+    --surface-elevated: 45 64% 12%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-creator {
+    @apply bg-creator text-creator-foreground hover:bg-creator-hover transition-all duration-300 ease-out transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-hero {
+    @apply bg-hero-gradient text-white hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-1;
+  }
+
+  .card-elevated {
+    @apply bg-card border border-border/50 shadow-lg hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-2 hover:border-primary/20;
+  }
+
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent;
+  }
+
+  .animate-on-scroll {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .animate-on-scroll.visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl;
+  }
+
+  .smooth-transition {
+    @apply transition-all duration-300 ease-out;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary-600));
+}
