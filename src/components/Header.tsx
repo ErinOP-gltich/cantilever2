@@ -17,7 +17,7 @@ const Header = () => {
         </Link>
         
         <nav className="hidden md:flex items-center space-x-6">
-          <a href="https://cantilever1.vercel.app" className="text-foreground/80 hover:text-primary smooth-transition hover-lift">
+          <a href="https://mycantilever.com" className="text-foreground/80 hover:text-primary smooth-transition hover-lift">
             Main Page
           </a>
           <Link to="/upload" className="text-foreground/80 hover:text-primary smooth-transition hover-lift">
